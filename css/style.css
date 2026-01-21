@@ -1,7 +1,7 @@
 :root{--brand:#0A61FF;} /* simplified placeholder */
 
 body {
-  background-image: url("../images/jra2026-1_1920x1080.jpg"); /* 画像のパスに変更 */
+  background-image: url("../images/BackGround.png"); /* 画像のパスに変更 */
   background-size: cover;         /* 画面いっぱいに表示 */
   background-position: center;     /* 中央に配置 */
   background-repeat: no-repeat;    /* 繰り返しなし */
