@@ -7,13 +7,6 @@ body {
   background-repeat: no-repeat;    /* 繰り返しなし */
 }
 
-.header {
-  background-color: #fff;            /* ← これが白のままにする決め手 */
-  border-bottom: 1px solid #eee;     /* 任意：下線で区切り */
-  position: relative;                /* 後述のz-indexに備えて */
-  z-index: 10;                       /* 背景より上に見せる保険（sticky時も安心） */
-}
-
 .nav-links {
   display: flex;
   align-items: center;
