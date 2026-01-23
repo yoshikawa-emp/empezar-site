@@ -20,4 +20,13 @@ body {
   gap: 24px;      /* 各リンクの間の余白 */
 }
 
+.header .container.nav {
+  display: flex;
+  align-items: center;      /* ロゴとナビの高さを揃える */
+  justify-content: flex-start; /* 左寄せ（中央分離したい場合は space-between） */
+  gap: 32px;                /* ロゴとナビの間の余白 */
+  padding: 12px 16px;
+}
+
+
 
