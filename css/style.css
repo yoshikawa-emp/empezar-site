@@ -14,3 +14,10 @@ body {
   z-index: 10;                       /* 背景より上に見せる保険（sticky時も安心） */
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;      /* 各リンクの間の余白 */
+}
+
+
