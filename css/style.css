@@ -16,7 +16,7 @@ body {
 .information {
   display: flex;
   align-items: center;
-  gap: 500px;
+  gap: 200px;
 }
 
 .header .container.nav {
