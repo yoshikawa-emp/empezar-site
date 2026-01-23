@@ -1,6 +1,6 @@
 :root{--brand:#0A61FF;} /* simplified placeholder */
 
-body {
+footer {
   background-image: url("../images/BackGround.png"); /* 画像のパスに変更 */
   background-size: cover;         /* 画面いっぱいに表示 */
   background-position: center;     /* 中央に配置 */
