@@ -14,7 +14,7 @@ body {
 }
 
 .information {
-  position: absolute;
+  position: relative;
   left: 200px;
 }
 
