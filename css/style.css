@@ -14,9 +14,8 @@ body {
 }
 
 .information {
-  display: flex;
-  align-items: center;
-  gap: 100px;
+  position: absolute;
+  left: 200px;
 }
 
 .header .container.nav {
