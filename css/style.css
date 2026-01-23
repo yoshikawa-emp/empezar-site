@@ -15,6 +15,10 @@ body {
 }
 
 .nav-links {
+  background-image: url("../images/BackGround.png"); /* 画像のパスに変更 */
+  background-size: cover;         /* 画面いっぱいに表示 */
+  background-position: center;     /* 中央に配置 */
+  background-repeat: no-repeat;    /* 繰り返しなし */
   display: flex;
   align-items: center;
   gap: 24px;      /* 各リンクの間の余白 */
