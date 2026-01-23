@@ -32,5 +32,23 @@ html, body {
 }
 
 
+.company-dl {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  column-gap: 16px;
+  row-gap: 8px;
+  margin: 0;
+}
+
+.company-dl dt {
+  font-weight: 600;
+  color: #333;
+}
+
+.company-dl dd {
+  margin: 0;               /* ブラウザの既定余白を消す */
+  line-height: 1.6;
+}
+
 
 
