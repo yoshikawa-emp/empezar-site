@@ -13,6 +13,12 @@ body {
   gap: 24px;      /* 各リンクの間の余白 */
 }
 
+.information {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
 .header .container.nav {
   display: flex;
   align-items: center;      /* ロゴとナビの高さを揃える */
