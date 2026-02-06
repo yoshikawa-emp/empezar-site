@@ -68,7 +68,7 @@ footer .copyright-bar {
   /* レイアウト */
   display: flex;
   align-items: left;
-  justify-content: center;
+  justify-content: left;
   height: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
