@@ -1,4 +1,7 @@
-:root{--brand:#0A61FF;} /* simplified placeholder */
+:root{
+  --brand:#0A61FF;
+  --copyright-height: 44px; /* 固定バーの高さ（必要に応じて調整） */
+     }
 
 body {
   min-height: 100vh;
@@ -6,6 +9,7 @@ body {
   background-size: cover;         /* 画面いっぱいに表示 */
   background-position: center;     /* 中央に配置 */
   background-repeat: no-repeat;    /* 繰り返しなし */
+  padding-bottom: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
 }
 
 .nav-links {
@@ -50,6 +54,37 @@ html, body {
   margin: 0;               /* ブラウザの既定余白を消す */
   line-height: 1.6;
 }
+
+/* 固定バー設定 */
+footer .copyright-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* レイヤーを前面に */
+  z-index: 999;
+
+  /* レイアウト */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* 見た目（必要に応じて調整） */
+  background: color-mix(in oklab, #fff 90%, transparent);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid var(--border, #e5e5e5);
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+
+/* 中のテキスト */
+footer .copyright-bar small {
+  font-size: 12px;
+  color: #555;
+}
+
 
 
 
