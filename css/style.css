@@ -67,16 +67,10 @@ footer .copyright-bar {
 
   /* レイアウト */
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   height: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
   padding-bottom: env(safe-area-inset-bottom, 0px);
-
-  /* 見た目（必要に応じて調整） */
-  background: color-mix(in oklab, #fff 90%, transparent);
-  backdrop-filter: blur(6px);
-  border-top: 1px solid var(--border, #e5e5e5);
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
 }
 
 /* 中のテキスト */
