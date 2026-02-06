@@ -1,25 +1,17 @@
 :root{
   --brand:#0A61FF;
   --copyright-height: 44px; /* 固定バーの高さ（必要に応じて調整） */
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
+     }
 
 body {
   min-height: 100vh;
   background-image: url("../images/BackGround.png"); /* 画像のパスに変更 */
-  background-size: cover;          /* 画面いっぱいに表示 */
+  background-size: cover;         /* 画面いっぱいに表示 */
   background-position: center;     /* 中央に配置 */
   background-repeat: no-repeat;    /* 繰り返しなし */
-
-  /* 固定バーの裏に本文が潜らないように下余白を確保 */
   padding-bottom: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
 }
 
-/* ====== ヘッダー周り（既存） ====== */
 .nav-links {
   display: flex;
   align-items: center;
@@ -33,13 +25,18 @@ body {
 
 .header .container.nav {
   display: flex;
-  align-items: center;       /* ロゴとナビの高さを揃える */
+  align-items: center;      /* ロゴとナビの高さを揃える */
   justify-content: flex-start; /* 左寄せ（中央分離したい場合は space-between） */
-  gap: 32px;                 /* ロゴとナビの間の余白 */
+  gap: 32px;                /* ロゴとナビの間の余白 */
   padding: 12px 16px;
 }
 
-/* ====== 会社概要DLレイアウト（既存） ====== */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
 .company-dl {
   display: grid;
   grid-template-columns: 160px 1fr;
@@ -47,54 +44,35 @@ body {
   row-gap: 8px;
   margin: 0;
 }
+
 .company-dl dt {
   font-weight: 600;
   color: #333;
 }
+
 .company-dl dd {
-  margin: 0;               /* 既定余白を消す */
+  margin: 0;               /* ブラウザの既定余白を消す */
   line-height: 1.6;
 }
 
-/* ====== フッター固定バー（containerを固定） ====== */
+/* 固定バー設定 */
 footer .copyright-bar {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
 
-  /* 前面へ */
-  z-index: 9999;
+  /* レイヤーを前面に */
+  z-index: 999;
 
   /* レイアウト */
   display: flex;
-  align-items: center;      /* ← align-items: left; は無効。center か flex-start を使う */
-  justify-content: flex-start; /* 左寄せ（中央寄せにしたい場合は center） */
-  gap: .5rem;
-
-  /* 高さと安全領域 */
+  align-items: flex-start;
+  justify-content: left;
   height: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
-  padding: 0 16px;
   padding-bottom: env(safe-area-inset-bottom, 0px);
-  box-sizing: border-box;
-
-  /* 見た目 */
-  background: #fff; /* 不透明にして背面テキストが透けないように */
-  border-top: 1px solid var(--border, #e5e5e5);
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.06);
 }
 
-/* 中のテキスト（1行で省略） */
-footer .copyright-bar small {
-  font-size: 12px;
-  color: #444;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
 
-/* モバイル微調整（任意） */
-@media (max-width: 480px) {
-  :root { --copyright-height: 40px; }
-}
+
+
