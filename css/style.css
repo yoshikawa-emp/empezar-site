@@ -29,7 +29,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;                       /* ドロップダウン等が隠れないように */
-  background: #fff;                    /* 透過だと背景が透けるので色を指定 */
   box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
 
