@@ -1,78 +1,50 @@
 :root{
   --brand:#0A61FF;
-  --copyright-height: 44px; /* 固定バーの高さ（必要に応じて調整） */
-     }
+  --copyright-height: 44px;           /* 既存：固定フッター高 */
+}
 
+/* 既存の body 設定は活かす */
+html, body { margin: 0; padding: 0; }
 body {
   min-height: 100vh;
-  background-image: url("../images/BackGround.png"); /* 画像のパスに変更 */
-  background-size: cover;         /* 画面いっぱいに表示 */
-  background-position: center;     /* 中央に配置 */
-  background-repeat: no-repeat;    /* 繰り返しなし */
+  background-image: url("../images/BackGround.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-bottom: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 24px;      /* 各リンクの間の余白 */
+/* ▼ ヘッダーを貼り付け（追加） */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;                       /* ドロップダウン等が隠れないように */
+  background: #fff;                    /* 透過だと背景が透けるので色を指定 */
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
 
-.information {
-  position: absolute;
-  left: 200px;
+/* 既存のレイアウト */
+.header .container.nav{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:32px;
+  padding:12px 16px;
 }
 
-.header .container.nav {
-  display: flex;
-  align-items: center;      /* ロゴとナビの高さを揃える */
-  justify-content: flex-start; /* 左寄せ（中央分離したい場合は space-between） */
-  gap: 32px;                /* ロゴとナビの間の余白 */
-  padding: 12px 16px;
-}
+.nav-links{ display:flex; align-items:center; gap:24px; }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
+/* そのほか既存スタイル … */
 
-
-.company-dl {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  column-gap: 16px;
-  row-gap: 8px;
-  margin: 0;
-}
-
-.company-dl dt {
-  font-weight: 600;
-  color: #333;
-}
-
-.company-dl dd {
-  margin: 0;               /* ブラウザの既定余白を消す */
-  line-height: 1.6;
-}
-
-/* 固定バー設定 */
-footer .copyright-bar {
+/* ▼ 固定フッター（既存のまま） */
+footer .copyright-bar{
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  /* レイヤーを前面に */
+  left: 0; right: 0; bottom: 0;
   z-index: 999;
-
-  /* レイアウト */
-  display: flex;
-  /*align-items: flex-start;*/
-  justify-content: left;
+  display:flex; justify-content:left;
   height: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-
-
-
+/* ▼ ページ内リンク(#id)で見出しが隠れないように（stickyでも有効） */
+[id]{ scroll-margin-top: 72px; }   /* ヘッダーがおおよそ 72px 程度なら */
