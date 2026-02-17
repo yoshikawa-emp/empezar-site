@@ -25,7 +25,6 @@ body {
 
 /* ▼ ヘッダーを貼り付け（追加） */
 .header{
-  background: rgba(255,255,255,0);
   position: sticky;
   top: 0;
   z-index: 1000;                       /* ドロップダウン等が隠れないように */
@@ -80,11 +79,4 @@ footer .copyright-bar {
   height: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
-
-
-/* main 直下の最初の要素の上マージンを無効化 */
-main > :first-child { margin-top: 0; }
-
-/* 代わりに main 自体に適度な内側余白を付与 */
-main { padding-top: 16px; }  /* お好みで 8〜24px の範囲で */
 
