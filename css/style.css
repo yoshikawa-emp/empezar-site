@@ -61,21 +61,11 @@ html, body {
   line-height: 1.6;
 }
 
-/* 固定バー設定 */
-footer .copyright-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  /* レイヤーを前面に */
-  z-index: 999;
-
-  /* レイアウト */
+.footer .container.nav {
   display: flex;
-  /*align-items: flex-start;*/
-  justify-content: left;
-  height: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  align-items: center;      /* ロゴとナビの高さを揃える */
+  justify-content: flex-start; /* 左寄せ（中央分離したい場合は space-between） */
+  gap: 32px;                /* ロゴとナビの間の余白 */
+  padding: 12px 16px;
 }
 
