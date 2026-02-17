@@ -76,10 +76,10 @@ html, body {
 
 main {
   flex: 1 0 auto;
+  margin-bottom: 40px; /* お好みで調整 */
 }
 
 .footer {
-  padding-top: 50px;
   position: static;        /* 追従固定を解除 */
   margin-top: auto;        /* 画面下へ押し下げる */
   background-color: #e5e5e5;
