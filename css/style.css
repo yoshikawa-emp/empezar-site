@@ -25,11 +25,9 @@ body {
 
 /* ▼ ヘッダーを貼り付け（追加） */
 .header{
-  --background: rgba(255,255,255,0);
   position: sticky;
   top: 0;
-  z-index: 1000;                       /* ドロップダウン等が隠れないように */
-  --box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  z-index: 1000;
 }
 
 .header .container.nav {
