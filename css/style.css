@@ -25,6 +25,7 @@ body {
 
 /* ▼ ヘッダーを貼り付け（追加） */
 .header{
+  box-shadow: none;
   background: rgba(255,255,255,0);
   position: sticky;
   top: 0;
