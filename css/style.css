@@ -159,30 +159,27 @@ main {
   color: #fff;
 }
 
-/* まずは全体の角丸を丸める（ pill 風 ） */
-.footer .nav-links a{
-  border-radius: 999px;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.18);
-  color:#fff;
+/* 各ボタンの右側に仕切り線 */
+.footer .nav-links a:not(:last-child){
+  position: relative;
 }
 
-/* 先頭ボタン：左を丸く・右はやや小さめ */
-.footer .nav-links a:first-child{
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+.footer .nav-links a:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  top: 8px;                 /* 線の上下余白（角丸に干渉しないよう少し内側） */
+  right: -1px;              /* ボタン同士が密着していても見える位置 */
+  width: 1px;
+  height: calc(100% - 16px);
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.10),
+    rgba(255,255,255,0.30),
+    rgba(255,255,255,0.10)
+  );
+  pointer-events: none;
 }
 
-/* 中間ボタン：内側の角丸を小さく（境目が読みやすくなる） */
-.footer .nav-links a:not(:first-child):not(:last-child){
-  border-radius: 10px;
-}
-
-/* 末尾ボタン：右を丸く・左はやや小さめ */
-.footer .nav-links a:last-child{
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
 
 
 
