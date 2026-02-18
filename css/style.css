@@ -1,6 +1,17 @@
 :root{
   --brand:#0A61FF;
-  --copyright-height: 44px; /* 固定バーの高さ（必要に応じて調整） */
+  --copyright-height: 44px; /* 固定バーの高さ（必要に応じて調整） */  
+　--brand-600:#0A61FF;
+  --brand-500:#2B78FF;
+  --brand-400:#4A8CFF;
+  --brand-300:#8FB5FF;
+  --ink:#1b2a3a;                    /* 本文色 */
+  --ink-weak:#5b6a79;               /* 補助の文字色 */
+  --surface:#ffffff;                /* ボタンの面色(白) */
+  --glass:rgba(255,255,255,.75);    /* ガラス調に使う時 */
+  --shadow:0 6px 16px rgba(12,40,80,.12);
+  --radius:10px;                    /* 角丸 */
+  --focus:#1C8DFF;                  /* フォーカスリング */
      }
 
 body {
@@ -21,6 +32,58 @@ body {
   display: flex;
   align-items: center;
   gap: 24px;      /* 各リンクの間の余白 */
+}
+
+/* aタグをボタン風にする共通プリセット */
+.nav-links a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5em;
+  min-height:40px;
+  padding:8px 14px;
+  border-radius:var(--radius);
+  font-weight:600;
+  font-size:15px;
+  letter-spacing:.02em;
+  text-decoration:none;
+  line-height:1;
+  transition:
+    background-color .2s ease,
+    color .2s ease,
+    border-color .2s ease,
+    transform .06s ease;
+  will-change: transform;
+  /* キーボード操作の視認性 */
+  outline: none;
+}
+.nav-links a:active{
+  transform: translateY(1px); /* クリック時に軽く沈む */
+}
+
+/* アクセシビリティ：フォーカスリング */
+.nav-links a:focus-visible{
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 35%, white);
+}
+
+/* —— ソリッド（標準） —— */
+.nav-links a{
+  background: linear-gradient(180deg, var(--brand-500), var(--brand-600));
+  color:#fff;
+  border:1px solid color-mix(in srgb, var(--brand-600) 85%, black);
+  box-shadow: var(--shadow);
+}
+.nav-links a:hover{
+  background: linear-gradient(180deg, var(--brand-400), var(--brand-600));
+}
+.nav-links a:active{
+  background: linear-gradient(180deg, var(--brand-500), var(--brand-600));
+}
+
+/* アクティブページ（常時強調） */
+.nav-links a.is-active{
+  background: linear-gradient(180deg, var(--brand-400), var(--brand-600));
+  border-color: color-mix(in srgb, var(--brand-600) 90%, black);
 }
 
 .information {
