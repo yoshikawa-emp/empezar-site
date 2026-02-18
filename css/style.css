@@ -74,7 +74,7 @@ body {
   box-shadow: var(--shadow);
 }
 .nav-links a:hover{ 
-　background: linear-gradient(180deg, #EAF1FF, #DDE7FF); /* ←お好みの色に */
+　background: linear-gradient(180deg, #A8C3FF, #82A5FF);
   box-shadow: 0 8px 20px rgba(10, 97, 255, .20);         /* 影は任意 */
 }
 .nav-links a:active{
