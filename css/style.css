@@ -159,4 +159,21 @@ main {
   color: #fff;
 }
 
+/* フッターのボタンだけに適用 */
+.footer .nav-links a{
+  background: rgba(255,255,255,0.06);             /* ごく薄い面色 */
+  border: 1px solid rgba(255,255,255,0.18);        /* 薄い外枠 */
+  border-radius: 12px;
+  color:#fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,.35);          /* 暗所用の影に変更 */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ホバー時は面と枠を少しだけ明るくして境界を強調 */
+.footer .nav-links a:hover{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.28);
+}
+
 
