@@ -73,8 +73,9 @@ body {
   border:1px solid color-mix(in srgb, var(--brand-600) 85%, black);
   box-shadow: var(--shadow);
 }
-.nav-links a:hover{
-  background: linear-gradient(180deg, var(--brand-400), var(--brand-600));
+.nav-links a:hover{ 
+　background: linear-gradient(180deg, #EAF1FF, #DDE7FF); /* ←お好みの色に */
+  box-shadow: 0 8px 20px rgba(10, 97, 255, .20);         /* 影は任意 */
 }
 .nav-links a:active{
   background: linear-gradient(180deg, var(--brand-500), var(--brand-600));
