@@ -146,9 +146,17 @@ main {
 .footer {
   position: static;        /* 追従固定を解除 */
   margin-top: auto;        /* 画面下へ押し下げる */
-  color: #fff;
   background-color: black;
   padding: 16px 16px calc(16px + env(safe-area-inset-bottom, 0px));
   box-shadow: 0 -4px 10px rgba(0,0,0,.04);
 }
+
+.footer .nav-links a {
+  color: #fff;
+}
+
+.footer small {
+  color: #fff;
+}
+
 
