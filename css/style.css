@@ -159,21 +159,30 @@ main {
   color: #fff;
 }
 
-/* フッターのボタンだけに適用 */
+/* まずは全体の角丸を丸める（ pill 風 ） */
 .footer .nav-links a{
-  background: rgba(255,255,255,0.06);             /* ごく薄い面色 */
-  border: 1px solid rgba(255,255,255,0.18);        /* 薄い外枠 */
-  border-radius: 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.18);
   color:#fff;
-  box-shadow: 0 6px 16px rgba(0,0,0,.35);          /* 暗所用の影に変更 */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 }
 
-/* ホバー時は面と枠を少しだけ明るくして境界を強調 */
-.footer .nav-links a:hover{
-  background: rgba(255,255,255,0.10);
-  border-color: rgba(255,255,255,0.28);
+/* 先頭ボタン：左を丸く・右はやや小さめ */
+.footer .nav-links a:first-child{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
+
+/* 中間ボタン：内側の角丸を小さく（境目が読みやすくなる） */
+.footer .nav-links a:not(:first-child):not(:last-child){
+  border-radius: 10px;
+}
+
+/* 末尾ボタン：右を丸く・左はやや小さめ */
+.footer .nav-links a:last-child{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
 
 
