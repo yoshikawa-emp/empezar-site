@@ -557,10 +557,14 @@ main {
 
 .svc-hero{
   position: relative;
-  background: var(--svc-grad);
   color: var(--svc-text);
   overflow: clip;
   border-bottom: 1px solid var(--svc-line);
+  isolation: isolate;
+  background:
+    var(--svc-grad),
+    url("../images/BackGround.png") no-repeat center top / clamp(960px, 90vw, 1400px) auto;
+
 }
 
 .svc-hero .svc-title{
