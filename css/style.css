@@ -267,7 +267,6 @@ main {
 /* カード全体 */
 .company-card{
   max-width: min(1040px, 100%);
-  margin: 24px auto;
   background: var(--surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -551,6 +550,6 @@ main {
 
 /* カード側は見出しを外に出すので、上の余白だけ少し増やすなら */
 .company-card{
-  margin: 8px auto 24px 0 !important;     /* 左寄せを維持しつつ上を詰める */
+  margin: 0px auto 24px 0 !important;     /* 左寄せを維持しつつ上を詰める */
   max-width: min(1040px, 100%);
 }
