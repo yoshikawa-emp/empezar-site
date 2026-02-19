@@ -258,10 +258,3 @@ main {
   animation: pulse 1.8s ease-in-out infinite;  /* 任意：アニメ効果 */
 }
 
-/* 任意：ふわっと広がるアニメ */
-@keyframes pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(255,71,87,.35); }
-  70%  { box-shadow: 0 0 0 10px rgba(255,71,87,0); }
-  100% { box-shadow: 0 0 0 0 rgba(255,71,87,0); }
-}
-
