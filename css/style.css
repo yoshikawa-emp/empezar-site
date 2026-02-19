@@ -535,12 +535,15 @@ main {
   display: flex !important;
   flex-direction: column;
   gap: 4px;
+  justify-content: flex-start !important; /* 縦方向：上揃え or 中央の指示を打ち消す */
+  align-items: flex-start !important;     /* 横方向：左寄せ */
+  text-align: left !important;            /* テキストの左寄せ */
 }
 
 /* 1行目の日本語/英語の見た目調整 */
 .company-card .spec-table .row:first-child .cell.val > :first-child{
   display: block;
-  font-weight: 700;
+  /*font-weight: 700;*/
   color: #111;                /* or var(--ink) */
   line-height: 1.5;
 }
