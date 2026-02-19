@@ -382,15 +382,6 @@ main {
   color:#111 !important;          /* または var(--ink) */
 }
 
-/* ========== ② 表（カード）を左寄せにする ========== */
-/* いま中央寄せになっている margin: 24px auto; を上書き */
-.company-card{
-  margin: 24px auto 24px 0 !important;  /* 左に寄せる */
-  /* 幅が広すぎると感じる場合は以下を有効化
-  max-width: 920px;
-  */
-}
-
 /* 親のコンテナが中央揃え（text-align:center など）を持っている場合の保険 */
 .company-card{
   display: block;
@@ -423,16 +414,6 @@ main {
 
 /* 2) 左カラム：背景ブルー＆白文字を“最優先”で適用 */
 .company-card .row{ background: transparent !important; } /* 親の白背景を無効化（保険） */
-
-/*.company-card .cell.key{
-  background:
-    linear-gradient(180deg,
-      var(--brand-500, var(--_brand-500-fb)),
-      var(--brand-600, var(--_brand-600-fb))
-    ) !important;
-  color: #fff !important;
-  font-weight: 700;
-}*/
 
 /* 3) 右カラム：白背景＋黒文字を固定 */
 .company-card .cell.val{
