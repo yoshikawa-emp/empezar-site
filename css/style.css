@@ -514,26 +514,42 @@ main {
   }
 }
 
-/* 会社概要の「最初の行（=会社名）」だけ、値セルを縦並びにする */
-.company-card .spec-table .row:first-child .cell.val{
-  display: flex;              /* 縦積みにする */
-  flex-direction: column;
-  gap: 4px;                   /* 日本語と英語の間隔 */
+/* 行を必ず2カラムのグリッドに */
+.company-card .spec-table .row{
+  display: grid !important;
+  grid-template-columns: var(--key-col-width, 220px) 1fr !important;
 }
 
-/* 値セル直下の要素をブロック化（spanでもpでもOK） */
-.company-card .spec-table .row:first-child .cell.val > *{
+/* 左：項目名（青帯）は1列目に固定 */
+.company-card .spec-table .row .cell.key{
+  grid-column: 1 !important;
+}
+
+/* 右：内容は2列目に固定 */
+.company-card .spec-table .row .cell.val{
+  grid-column: 2 !important;
+}
+
+/* 1行目（会社名）の値セルだけ縦積み（2行表示） */
+.company-card .spec-table .row:first-child .cell.val{
+  display: flex !important;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 1行目の日本語/英語の見た目調整 */
+.company-card .spec-table .row:first-child .cell.val > :first-child{
   display: block;
+  font-weight: 700;
+  color: #111;                /* or var(--ink) */
   line-height: 1.5;
 }
-
-/* 日本語は少し強め、英語は淡め（既存の .en を活かしつつ） */
-.company-card .spec-table .row:first-child .cell.val > :first-child{
-  font-weight: 700;
-  color: #111;                /* または var(--ink) */
-}
 .company-card .spec-table .row:first-child .cell.val .en{
-  color: var(--ink-weak);     /* 既にある場合はそのままでOK */
+  display: block;
+  color: var(--ink-weak);
   font-size: .95em;
+  line-height: 1.5;
   letter-spacing: .02em;
+  margin-top: 2px;
 }
+
