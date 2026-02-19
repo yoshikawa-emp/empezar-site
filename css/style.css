@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
   min-height: 100svh; /* 可能なら追記：モバイルで安全 */
   background-image: url("../images/BackGround.png"); /* 画像のパスに変更 */
-  background-size: cover;         /* 画面いっぱいに表示 */
+  /*background-size: cover;*/         /* 画面いっぱいに表示 */
   background-position: center;     /* 中央に配置 */
   background-repeat: no-repeat;    /* 繰り返しなし */
   padding-bottom: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
@@ -821,19 +821,5 @@ main {
 @media (prefers-reduced-motion: reduce){
   .svc-card,
   .svc-btn-primary{ transition: none; }
-}
-
-/* 背景ズーム抑制（最小限の上書き） */
-.svc-hero,
-.svc-hero-bg,
-.svc-hero::after{
-  background-repeat: no-repeat !important;
-  background-position: center top !important;
-  background-size: clamp(960px, 90vw, 1280px) auto !important;
-}
-
-/* ヒーローの余白を調整（高さが大きいとズームに見えやすい） */
-.svc-hero .svc-inner{
-  padding-block: clamp(28px, 6vw, 56px) !important;
 }
 
