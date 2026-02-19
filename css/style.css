@@ -827,33 +827,4 @@ main {
   .svc-btn-primary{ transition: none; }
 }
 
-/* ───────── 事業内容ページだけのヒーロー背景（等倍～縮小）───────── */
-.is-services .svc-hero{
-  position: relative;
-  isolation: isolate; /* 内部の重なりを独立させる（背景を最背面へ） */
-  /* 既存の var(--svc-grad) はそのままでOK（ズームとは無関係） */
-}
-
-/* 1526×1024 の BackGround.png を「拡大しない」で敷く */
-.is-services .svc-hero::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1; /* テキストより背面、グラデーションと同居可能 */
-  background-image: url("../images/BackGround.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-
-  /* ← ここが肝：元画像の 1526px を上限に“等倍～縮小のみ”にする */
-  background-size: clamp(980px, 85vw, 1526px) auto;
-
-  /* お好みで薄く（強ければ 1.0 に） */
-  opacity: .95;
-}
-
-/* ヒーローの上下余白が大きいと相対的に“拡大っぽく”見えやすいので控えめに（任意） */
-.is-services .svc-hero .svc-inner{
-  padding-block: clamp(28px, 6vw, 56px);
-}
-
 
