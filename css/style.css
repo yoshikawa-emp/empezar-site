@@ -241,18 +241,9 @@ main {
   position: relative;
 }
 
-/* ニュース1行 */
-.news {
-  display: inline-flex;          /* ← テキストとバッジを横並びで保持 */
-  align-items: center;
-  gap: 8px;                      /* テキストとバッジの間隔 */
-  white-space: nowrap;           /* 折り返したくない場合は有効、不要なら消す */
-  font-size: 16px;               /* お好みで */
-}
-
 /* NEWバッジ本体 */
 .news.is-new::after {
-  content: "NEW";
+  content: "NEW!";
   display: inline-block;
   padding: 1px 8px;
   font-size: 12px;
