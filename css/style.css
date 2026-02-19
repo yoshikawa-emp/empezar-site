@@ -188,14 +188,14 @@ main {
   box-shadow: 0 8px 22px rgba(0,0,0,.45);
 }
 
-.services-section {
-    margin: 60px 0;
+.main-section {
+    margin: 30px 0;
     padding: 20px;
     max-width: 900px;
     text-align: left;
 }
 
-.services-title {
+.main-title {
     font-family: 'Noto Serif JP', serif;
     font-size: 32px;
     letter-spacing: 2px;
@@ -203,7 +203,7 @@ main {
     position: relative;
 }
 
-.services-title::after {
+.main-title::after {
     content: "";
     width: 60px;
     height: 3px;
@@ -212,7 +212,7 @@ main {
     margin-top: 8px;
 }
 
-.services-text {
+.main-text {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 17px;
     line-height: 1.9;
@@ -220,7 +220,7 @@ main {
     margin-bottom: 30px;
 }
 
-.services-button {
+.main-button {
     display: inline-block;
     padding: 12px 28px;
     background: linear-gradient(135deg, #1e90ff, #00b4ff);
@@ -232,7 +232,7 @@ main {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-.services-button:hover {
+.main-button:hover {
     background: linear-gradient(135deg, #1984e6, #009fe0);
     transform: translateY(-2px);
 }
