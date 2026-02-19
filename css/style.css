@@ -492,7 +492,7 @@ main {
 
 /* カード外の見出し（会社概要） */
 .page-title{
-  margin: 0 0 12px;                       /* カードとの間隔を少し */
+  margin: 0;
   padding: 0 !important;
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
   font-size: clamp(20px, 2.6vw, 28px);
