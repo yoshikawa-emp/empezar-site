@@ -195,7 +195,8 @@ main {
 
 .main-section {
     margin: 0;
-    padding: 20px;
+    padding-top: 0;
+    padding-right:20px; padding-bottom:20px; padding-left:20px; 
     max-width: 900px;
     text-align: left;
 }
