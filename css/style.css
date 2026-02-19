@@ -1,7 +1,7 @@
 :root{
   --brand:#0A61FF;
   --copyright-height: 44px; /* 固定バーの高さ（必要に応じて調整） */  
-　--brand-600:#0A61FF;
+  --brand-600:#0A61FF;
   --brand-500:#2B78FF;
   --brand-400:#4A8CFF;
   --brand-300:#8FB5FF;
@@ -12,7 +12,7 @@
   --shadow:0 6px 16px rgba(12,40,80,.12);
   --radius:10px;                    /* 角丸 */
   --focus:#1C8DFF;                  /* フォーカスリング */
-　--card-border: color-mix(in srgb, var(--brand-300) 10%, #0000);
+  --card-border: color-mix(in srgb, var(--brand-300) 10%, #0000);
   --key-col-width: 220px;              /* 左カラムの幅 */
   --row-min-height: 56px;              /* 行の最低高 */
   --heading-underline: var(--brand-400);
