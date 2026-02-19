@@ -276,6 +276,17 @@ main {
   border: 1px solid var(--card-border);
   overflow: hidden;
   color: inherit !important;
+  padding-top: 1px;        /* 見た目に影響しない最小値 */
+}
+
+/* カード直下の spec-table 先頭要素の margin を潰す（安全策） */
+.company-card > .spec-table > *:first-child{
+  margin-top: 0 !important;
+}
+
+/* 先頭の行に margin が入っている可能性への保険 */
+.company-card .row:first-child{
+  margin-top: 0 !important;
 }
 
 /* 1行 */
