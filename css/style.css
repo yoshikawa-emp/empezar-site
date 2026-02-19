@@ -266,18 +266,16 @@ main {
 
 /* カード全体 */
 .company-card{
+  margin: 0 auto 0 0 !important;
   max-width: min(1040px, 100%);
+  display: block;
+  text-align: left;
   background: var(--surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border: 1px solid var(--card-border);
   overflow: hidden;
-}
-
-/* 本体：擬似テーブル */
-.company-card .spec-table{
-  display: grid;
-  grid-auto-rows: minmax(var(--row-min-height), auto);
+  color: inherit !important;
 }
 
 /* 1行 */
@@ -382,12 +380,6 @@ main {
   color:#111 !important;          /* または var(--ink) */
 }
 
-/* 親のコンテナが中央揃え（text-align:center など）を持っている場合の保険 */
-.company-card{
-  display: block;
-  text-align: left;
-}
-
 /* ページ全体の内側余白に合わせたいとき（任意） */
 @media (min-width: 1024px){
   /* 例えばヘッダーの .container.nav と同じ左右余白に合わせたい場合 */
@@ -428,17 +420,10 @@ main {
    すでに入れている以下のような指定があれば削除するか、val限定に書き換えてください。
    .company-card, .company-card .cell, .company-card .cell.val, .company-card .cell.val * { color:#111 !important; }
 */
-.company-card{ color: inherit !important; }
 .company-card .cell{ color: inherit !important; }
 /* 右側は改めて黒に（上で指定済み） */
 
-/* 5) 左寄せ（親の中央寄せに勝つために !important を維持） */
-.company-card{
-  margin: 24px auto 24px 0 !important;
-  text-align: left;
-}
-
-/* 6) レイアウトの基本（念のため再掲：2カラム指定が外れていた場合に備えて） */
+/* 5) レイアウトの基本（念のため再掲：2カラム指定が外れていた場合に備えて） */
 .company-card .spec-table{
   display: grid;
   grid-auto-rows: minmax(var(--row-min-height, 56px), auto);
@@ -523,14 +508,8 @@ main {
   content: "";
   position: absolute;
   left: 0; bottom: 0;
-  width: 160px;                           /* お好みで */
+  width: 160px;
   height: 3px;
   background: linear-gradient(90deg, var(--heading-underline, var(--brand-400)), transparent 70%);
   border-radius: 2px;
-}
-
-/* カード側は見出しを外に出すので、上の余白だけ少し増やすなら */
-.company-card{
-  margin: 0 auto 0 0 !important;     /* 左寄せを維持しつつ上を詰める */
-  max-width: min(1040px, 100%);
 }
