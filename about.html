@@ -25,18 +25,54 @@
   </div> 
 </header>
 
-<main>
-  <h1>会社概要</h1>
-  <div class="container footer-grid">     
-   <dl class="company-dl">
-     <dt>会社名</dt><dd>株式会社エンペサール<br>empezar corp.</dd>
-     <dt>設立</dt><dd>2025年 9月 1日</dd>
-     <dt>本社</dt><dd>〒540-0008　　大阪府大阪市中央区大手前１-７-３１ ＯＭＭ１階ServiceOffice W天満橋<br>TEL : 06-6940-4597<br>FAX : 06-6940-4598</dd>
-     <dt>資本金</dt><dd>1000万円</dd>
-     <dt>役員</dt><dd>代表取締役　溝口 真理</dd>
-   </dl>
-  </div> 
-</main>
+
+<main class="container">
+    <section class="company-card" aria-labelledby="heading-outline">
+      <header class="card-head">
+        <h1 id="heading-outline">会社概要</h1>
+      </header>
+
+      <div class="spec-table" role="table" aria-label="会社概要">
+        <!-- 1行 -->
+        <div class="row" role="row">
+          <div class="cell key" role="rowheader">会社名</div>
+          <div class="cell val" role="cell">株式会社エンペサール<br><span class="en">empezar corp.</span></div>
+        </div>
+
+        <div class="row" role="row">
+          <div class="cell key" role="rowheader">設立</div>
+          <div class="cell val" role="cell">2025年9月1日</div>
+        </div>
+
+        <div class="row" role="row">
+          <div class="cell key" role="rowheader">資本金</div>
+          <div class="cell val" role="cell">1000万円</div>
+        </div>
+
+        <div class="row" role="row">
+          <div class="cell key" role="rowheader">代表者</div>
+          <div class="cell val" role="cell">満口 真理</div>
+        </div>
+
+        <div class="row" role="row">
+          <div class="cell key" role="rowheader">所在地</div>
+          <div class="cell val" role="cell">
+            〒540-0008　大阪府大阪市中央区大手前1-7-31 OMM 1階 ServiceOffice W天満橋
+          </div>
+        </div>
+
+        <div class="row" role="row">
+          <div class="cell key" role="rowheader">電話番号</div>
+          <div class="cell val" role="cell">06-6940-4597</div>
+        </div>
+
+        <div class="row" role="row">
+          <div class="cell key" role="rowheader">FAX番号</div>
+          <div class="cell val" role="cell">06-6940-4598</div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 <footer class="footer" role="contentinfo">
   <div class="container nav" aria-label="メインナビゲーション"> 
