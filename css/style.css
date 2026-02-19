@@ -388,3 +388,55 @@ main {
   .company-card .cell .en{ color: #9fb0c3; }
 }
 
+
+.company-card,
+.company-card .cell,
+.company-card .cell.val,
+.company-card .cell.val * {
+  color: #111 !important;           /* 必要なら var(--ink) に変えてもOK */
+}
+
+/* 左帯（key）は白文字のまま残したい場合は下を維持 */
+.company-card .cell.key{
+  color: #fff !important;
+}
+
+/* 英字の補助表記は少し薄く（任意） */
+.company-card .cell .en{
+  color: #555 !important;           /* または var(--ink-weak) */
+}
+
+/* ========== ② 表（カード）を左寄せにする ========== */
+/* いま中央寄せになっている margin: 24px auto; を上書き */
+.company-card{
+  margin: 24px auto 24px 0 !important;  /* 左に寄せる */
+  /* 幅が広すぎると感じる場合は以下を有効化
+  max-width: 920px;
+  */
+}
+
+/* 親のコンテナが中央揃え（text-align:center など）を持っている場合の保険 */
+.company-card{
+  display: block;
+  text-align: left;
+}
+
+/* ページ全体の内側余白に合わせたいとき（任意） */
+@media (min-width: 1024px){
+  /* 例えばヘッダーの .container.nav と同じ左右余白に合わせたい場合 */
+  .company-card{
+    /* 左ペインの基準位置を少し右にしたいときだけ有効化
+    margin-left: 16px !important;
+    */
+  }
+}
+
+/* スマホでの見え方は従来どおり（中央→左）でOKだが、
+   さらに端まで寄せたいときは内側余白も調整（任意） */
+@media (max-width: 720px){
+  .company-card{
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+}
+
