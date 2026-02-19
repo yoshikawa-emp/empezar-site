@@ -556,3 +556,31 @@ main {
   margin-top: 2px;
 }
 
+/* カード外の見出し（会社概要） */
+.page-title{
+  margin: 0 0 12px;                       /* カードとの間隔を少し */
+  padding: 24px 0 10px;
+  font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 700;
+  color: var(--ink);
+  position: relative;
+  letter-spacing: .02em;
+  /* 背景はページ全体の背景に溶け込ませる。カード上の白帯は廃止 */
+}
+
+/* 下線のアクセント（以前の .card-head h1::after と同じニュアンス） */
+.page-title::after{
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 160px;                           /* お好みで */
+  height: 3px;
+  background: linear-gradient(90deg, var(--heading-underline, var(--brand-400)), transparent 70%);
+  border-radius: 2px;
+}
+
+/* カード側は見出しを外に出すので、上の余白だけ少し増やすなら */
+.company-card{
+  margin: 8px auto 24px 0 !important;     /* 左寄せを維持しつつ上を詰める */
+  max-width: min(1040px, 100%);
+}
