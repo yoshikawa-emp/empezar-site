@@ -237,8 +237,8 @@ main {
     transform: translateY(-2px);
 }
 
-.news:contains("お知らせ")::after { 
-    content: "NEW";
+.main-title.is-news {
+  position: relative;
 }
 
 .news.is-news::after {
