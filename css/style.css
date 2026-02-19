@@ -396,9 +396,17 @@ main {
   color: #111 !important;           /* 必要なら var(--ink) に変えてもOK */
 }
 
-/* 左帯（key）は白文字のまま残したい場合は下を維持 */
+/* 左カラムをブルー帯にする（テキストは白） */
 .company-card .cell.key{
+  background: linear-gradient(180deg, var(--brand-500), var(--brand-600)) !important;
   color: #fff !important;
+  font-weight: 700;
+}
+
+/* 右カラムは白＋黒文字のまま */
+.company-card .cell.val{
+  background:#fff !important;
+  color:#111 !important;          /* または var(--ink) */
 }
 
 /* 英字の補助表記は少し薄く（任意） */
