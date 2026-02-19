@@ -188,5 +188,52 @@ main {
   box-shadow: 0 8px 22px rgba(0,0,0,.45);
 }
 
+.services-section {
+    margin: 60px auto;
+    padding: 20px;
+    max-width: 900px;
+    text-align: left;
+}
 
+.services-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.services-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #31a2f2;
+    display: block;
+    margin-top: 8px;
+}
+
+.services-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.services-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #1e90ff, #00b4ff);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.services-button:hover {
+    background: linear-gradient(135deg, #1984e6, #009fe0);
+    transform: translateY(-2px);
+}
 
