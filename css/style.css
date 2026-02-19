@@ -275,32 +275,6 @@ main {
   overflow: hidden;
 }
 
-/* 見出し（上部） */
-.company-card .card-head{
-  padding: 24px 24px 16px;
-  background:
-    radial-gradient(600px 220px at -10% -20%, color-mix(in srgb, var(--brand-300) 25%, #fff) , transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,1));
-}
-.company-card .card-head h1{
-  margin: 0;
-  font-size: clamp(20px, 2.6vw, 28px);
-  font-weight: 700;
-  color: var(--ink);
-  position: relative;
-  display: inline-block;
-  padding-bottom: 8px;
-  letter-spacing: .02em;
-}
-.company-card .card-head h1::after{
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--heading-underline), transparent 70%);
-  border-radius: 2px;
-}
-
 /* 本体：擬似テーブル */
 .company-card .spec-table{
   display: grid;
@@ -407,11 +381,6 @@ main {
 .company-card .cell.val{
   background:#fff !important;
   color:#111 !important;          /* または var(--ink) */
-}
-
-/* 英字の補助表記は少し薄く（任意） */
-.company-card .cell .en{
-  color: #555 !important;           /* または var(--ink-weak) */
 }
 
 /* ========== ② 表（カード）を左寄せにする ========== */
@@ -559,7 +528,8 @@ main {
 /* カード外の見出し（会社概要） */
 .page-title{
   margin: 0 0 12px;                       /* カードとの間隔を少し */
-  padding: 24px 0 10px;
+  padding: 0 !important;
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
   font-size: clamp(20px, 2.6vw, 28px);
   font-weight: 700;
   color: var(--ink);
