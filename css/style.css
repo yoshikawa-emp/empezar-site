@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
   min-height: 100svh; /* 可能なら追記：モバイルで安全 */
   background-image: url("../images/BackGround.png"); /* 画像のパスに変更 */
-  /*background-size: cover;*/        /* 画面いっぱいに表示 */
+  background-size: cover;        /* 画面いっぱいに表示 */
   background-position: center;     /* 中央に配置 */
   background-repeat: no-repeat;    /* 繰り返しなし */
   padding-bottom: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
@@ -827,32 +827,31 @@ main {
   .svc-btn-primary{ transition: none; }
 }
 
-/* ──────────── 事業内容ページだけの背景設定 ──────────── */
-/* 背景は .svc-hero に敷く（本文の高さに引っ張られない） */
+/* ───────── 事業内容ページだけのヒーロー背景（等倍～縮小）───────── */
 .is-services .svc-hero{
   position: relative;
-  isolation: isolate; /* 内部の重なり順を独立 */
+  isolation: isolate; /* 内部の重なりを独立させる（背景を最背面へ） */
+  /* 既存の var(--svc-grad) はそのままでOK（ズームとは無関係） */
 }
 
-/* 背景アート（1526×1024）は等倍～縮小のみ。拡大はしない */
+/* 1526×1024 の BackGround.png を「拡大しない」で敷く */
 .is-services .svc-hero::after{
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: -1; /* テキストより背面、グラデーションと同居可能 */
   background-image: url("../images/BackGround.png");
   background-repeat: no-repeat;
   background-position: center top;
 
-  /* 横幅を 980px〜画面幅の85%〜最大1526pxで可変。
-     → 1526px を超えて拡大しない（＝ズーム感を抑止） */
+  /* ← ここが肝：元画像の 1526px を上限に“等倍～縮小のみ”にする */
   background-size: clamp(980px, 85vw, 1526px) auto;
 
-  /* 見え方の微調整（お好みで） */
-  opacity: 0.95;
+  /* お好みで薄く（強ければ 1.0 に） */
+  opacity: .95;
 }
 
-/* ヒーローの上下余白が大きいと「相対的に拡大」に見えやすいので控えめに（任意） */
+/* ヒーローの上下余白が大きいと相対的に“拡大っぽく”見えやすいので控えめに（任意） */
 .is-services .svc-hero .svc-inner{
   padding-block: clamp(28px, 6vw, 56px);
 }
