@@ -237,3 +237,31 @@ main {
     transform: translateY(-2px);
 }
 
+.news:contains("お知らせ")::after { 
+    content: "NEW";
+}
+
+.news.is-news::after {
+    content: "NEW";
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #fff;
+    background: #ff4757;          /* 赤系 */
+    border-radius: 999px;         /* ピル型 */
+    vertical-align: middle;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+/* ちょっと目立たせるアニメーション（任意） */
+.news.is-news::after {
+    animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255,71,87,.5); }
+    70%  { box-shadow: 0 0 0 10px rgba(255,71,87,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,71,87,0); }
+}
