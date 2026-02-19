@@ -823,21 +823,3 @@ main {
   .svc-btn-primary{ transition: none; }
 }
 
-/* 背景画像を敷いている要素（例：.svc-hero、または .svc-hero-bg）に上書き */
-.svc-hero,
-.svc-hero-bg {
-  /* ズームさせたくない */
-  background-repeat: no-repeat !important;
-  background-position: center top !important;
-
-  /* 1) 等倍～縮小のみ（拡大禁止） */
-  background-size: clamp(960px, 90vw, 1280px) auto !important;
-  /* ↑ 画像の横幅を 960～1280px の範囲で可変に。高さはアスペクト比維持 */
-
-}
-
-/* ヒーローの余白が大きいと相対的に「拡大に見える」ので少し抑えめに */
-.svc-hero .svc-inner{
-  padding-block: clamp(28px, 6vw, 56px);
-}
-
