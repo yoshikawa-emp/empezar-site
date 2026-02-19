@@ -456,7 +456,7 @@ main {
 /* 2) 左カラム：背景ブルー＆白文字を“最優先”で適用 */
 .company-card .row{ background: transparent !important; } /* 親の白背景を無効化（保険） */
 
-.company-card .cell.key{
+/*.company-card .cell.key{
   background:
     linear-gradient(180deg,
       var(--brand-500, var(--_brand-500-fb)),
@@ -464,7 +464,7 @@ main {
     ) !important;
   color: #fff !important;
   font-weight: 700;
-}
+}*/
 
 /* 3) 右カラム：白背景＋黒文字を固定 */
 .company-card .cell.val{
