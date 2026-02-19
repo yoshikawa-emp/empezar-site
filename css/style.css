@@ -180,18 +180,6 @@ main {
   pointer-events: none;
 }
 
-/* フッターのボタン通常 */
-.footer .nav-links a{
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,.35);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .06s ease;
-}
-
 /* ホバーで面と枠を強めに（暗い背景でも一目で分かる） */
 .footer .nav-links a:hover,
 .footer .nav-links a:focus-visible{
