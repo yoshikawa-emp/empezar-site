@@ -82,9 +82,6 @@ body {
 　background: linear-gradient(180deg, #A8C3FF, #82A5FF);
   box-shadow: 0 8px 20px rgba(10, 97, 255, .20);         /* 影は任意 */
 }
-.nav-links a:active{
-  background: linear-gradient(180deg, var(--brand-500), var(--brand-600));
-}
 
 /* アクティブページ（常時強調） */
 .nav-links a.is-active{
