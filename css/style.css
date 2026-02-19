@@ -513,3 +513,22 @@ main {
     border-bottom: 1px solid color-mix(in srgb, var(--ink, #1b2a3a) 8%, transparent);
   }
 }
+
+/* 会社名（日本語/英語）を2行にする */
+.company-card .cell.val .company-name-jp,
+.company-card .cell.val .company-name-en{
+  display: block;           /* 縦並びに */
+  line-height: 1.5;
+}
+
+/* 見た目の整え（お好みで） */
+.company-card .cell.val .company-name-jp{
+  font-weight: 700;         /* 日本語を太めに */
+  color: #111;              /* 既定の本文色でもOK（var(--ink)） */
+}
+.company-card .cell.val .company-name-en{
+  margin-top: 4px;          /* 行間の余白 */
+  font-size: .95em;         /* 少し小さく */
+  color: var(--ink-weak);   /* 補助色（薄め） */
+  letter-spacing: .02em;    /* 英字の字間を少しだけ */
+}
