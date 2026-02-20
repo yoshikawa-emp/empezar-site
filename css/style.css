@@ -85,7 +85,7 @@ body {
   /*background: linear-gradient(180deg, var(--brand-500), var(--brand-600));*/
   color: #000;
   /*border:1px solid color-mix(in srgb, var(--brand-600) 85%, black);*/
-  box-shadow: var(--shadow);
+  /*box-shadow: var(--shadow);*/
 }
 .nav-links a:hover{ 
   background: linear-gradient(180deg, #A8C3FF, #82A5FF);
