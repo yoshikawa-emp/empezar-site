@@ -98,6 +98,27 @@ body {
   border-color: color-mix(in srgb, var(--brand-600) 90%, black);
 }
 
+/* 右境界だけ描く。最終項目は描かない */
+.header .nav-links a{
+  position:relative;
+}
+
+.header .nav-links a:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  top:8px;                 /* 上下に少し余白を空けると上品 */
+  bottom:8px;
+  right:0;
+  width:1px;               /* 1pxのヘアライン */
+  background: color-mix(in srgb, currentColor 18%, transparent);
+  /* ダークモードにも寄り添うなら currentColor ベースが楽 */
+}
+
+/* hover時は少しコントラスト上げる */
+.header .nav-links a:hover::after{
+  background: color-mix(in srgb, currentColor 28%, transparent);
+}
+
 .information {
   position: absolute;
   left: 200px;
