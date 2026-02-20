@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
   min-height: 100svh; /* 可能なら追記：モバイルで安全 */
   background-image: url("../images/BackGround.png"); /* 画像のパスに変更 */
-  background-size: cover;        /* 画面いっぱいに表示 */
+  background-size: contain;        /* 画面いっぱいに表示 */
   background-position: center;     /* 中央に配置 */
   background-repeat: no-repeat;    /* 繰り返しなし */
   padding-bottom: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
