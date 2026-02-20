@@ -95,7 +95,7 @@ body {
 /* アクティブページ（常時強調） */
 .nav-links a.is-active{
   background: linear-gradient(180deg, var(--brand-400), var(--brand-600));
-  border-color: color-mix(in srgb, var(--brand-600) 90%, black);
+  /*border-color: color-mix(in srgb, var(--brand-600) 90%, black);*/
 }
 
 .information {
