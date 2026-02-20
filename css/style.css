@@ -29,8 +29,6 @@ body {
   padding-bottom: calc(var(--copyright-height) + env(safe-area-inset-bottom, 0px));
   display: flex;
   flex-direction: column;
-  /* 追従固定をやめるので下余白は不要：削除してOK */
-  padding-bottom: 0;
 }
 
 .nav-links {
