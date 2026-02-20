@@ -175,7 +175,7 @@ main {
   position: relative;
 }
 
-.footer .nav-links a:not(:last-child)::after{
+.nav-links a:not(:last-child)::after{
   content:"";
   position:absolute;
   top: 8px;                 /* 線の上下余白（角丸に干渉しないよう少し内側） */
