@@ -171,7 +171,7 @@ main {
 }
 
 /* 各ボタンの右側に仕切り線 */
-.footer .nav-links a:not(:last-child){
+.nav-links a:not(:last-child){
   position: relative;
 }
 
