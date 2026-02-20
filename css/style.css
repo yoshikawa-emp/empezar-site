@@ -171,11 +171,11 @@ main {
 }
 
 /* 各ボタンの右側に仕切り線 */
-.nav-links a:not(:last-child){
+.footer .nav-links a:not(:last-child){
   position: relative;
 }
 
-.nav-links a:not(:last-child)::after{
+.footer .nav-links a:not(:last-child)::after{
   content:"";
   position:absolute;
   top: 8px;                 /* 線の上下余白（角丸に干渉しないよう少し内側） */
