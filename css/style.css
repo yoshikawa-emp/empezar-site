@@ -26,6 +26,10 @@ html, body {
   padding: 0;
 }
 
+html {
+  overflow-y: scroll; /* 必ずY軸スクロールバーを出す */
+}
+
 body {
   position: relative;
   background: transparent; /* html背景を邪魔しないように */
