@@ -27,6 +27,7 @@ html, body {
 }
 
 body {
+  position: relative;
   background: transparent; /* html背景を邪魔しないように */
   min-height: 100vh;
   min-height: 100svh; /* 可能なら追記：モバイルで安全 */
