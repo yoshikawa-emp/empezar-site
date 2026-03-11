@@ -119,6 +119,33 @@ body {
   background: color-mix(in srgb, currentColor 28%, transparent);
 }
 
+.header .nav-links a:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  top:8px;
+  bottom:8px;
+  right:0;
+  width:1px;
+  background: color-mix(in srgb, currentColor 18%, transparent);
+}
+
+/* hover時はコントラスト上げる（既存） */
+.header .nav-links a:hover::after{
+  background: color-mix(in srgb, currentColor 28%, transparent);
+}
+
+/* ===== 追加：ホバーした項目の右線を消す ===== */
+.header .nav-links a:hover::after{
+  opacity: 0;   /* または background: transparent; */
+}
+
+/* ===== 追加：ホバー項目の“左側”の線も消す =====
+   左隣の項目がもつ ::after（右線）を、右隣に hover がいるときに消す */
+.header .nav-links a:has(+ a:hover)::after{
+  opacity: 0;   /* または background: transparent; */
+}
+
+
 .information {
   position: absolute;
   left: 200px;
