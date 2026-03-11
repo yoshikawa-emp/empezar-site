@@ -19,16 +19,17 @@
 
      }
 
-
-html {
-  scrollbar-gutter: stable both-edges;
+/* リセット（全ページで統一） */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: transparent; /* html背景を邪魔しないように */
   min-height: 100vh;
   min-height: 100svh; /* 可能なら追記：モバイルで安全 */
-  padding-bottom: 0;
   display: flex;
   flex-direction: column;
 }
@@ -36,14 +37,11 @@ body {
 /* 画面全体に固定される背景（どのページでも同じ見え方になる） */
 body::before {
   content: "";
-  position: fixed;        /* ← ここがポイント：ビューポート基準に固定 */
+  position: fixed;              /* ← ビューポート基準で固定 */
   inset: 0;
-  z-index: -1;            /* コンテンツの背面に配置 */
-  background-color: #0b1b2b;
-  background-image: url("../images/BackGround.png"); /* CSSファイルからの相対パスでOK */
-  background-repeat: no-repeat;
-  background-position: center;      /* 必要なら center top などに */
-  background-size: cover;           /* どのページでも同じ拡大率のロジック */
+  z-index: -1;                  /* コンテンツの背面に配置 */
+  background: #0b1b2b url("../images/BackGround.png")
+              no-repeat center / cover;
 }
 
 .nav-links {
