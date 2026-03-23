@@ -1140,31 +1140,3 @@ body { color: var(--ink); background: var(--paper); }
 .main-section{
   margin-top: clamp(32px, 5vw, 56px);
 }
-
-/* --- 左揃え用の上書き --- */
-.hero-inner{
-  /* 中央寄せグリッド → 左揃え */
-  justify-items: start;
-  text-align: left;
-}
-
-.hero-title{
-  text-align: left;
-}
-
-.hero-lead{
-  /* カードを左側に揃え、横幅を読みやすく制御 */
-  align-self: start;
-  max-width: min(900px, 100%);
-  margin-left: 0;
-  margin-right: auto; /* 念のため右側に余白を逃がす */
-}
-
-.hero-ctas{
-  justify-content: flex-start; /* ボタン群を左揃え */
-}
-
-.btn{
-  /* 左寄せでもクリック感を保つための微調整（任意） */
-  transform-origin: left center;
-}
