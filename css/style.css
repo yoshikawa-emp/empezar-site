@@ -40,14 +40,14 @@ body {
 }
 
 /* 画面全体に固定される背景（どのページでも同じ見え方になる） */
-/*body::before {
+body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
   background: #0b1b2b url("../images/BackGround.png")
               no-repeat center / cover;
-}*/
+}
 
 .nav-links {
   display: flex;
