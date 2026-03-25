@@ -43,6 +43,13 @@ body {
   min-width: 530px;
 }
 
+@media (max-width: 530px) {
+  body {
+    transform: scale(0.8);
+  　transform-origin: top left;
+  }
+}
+
 /* 画面全体に固定される背景（どのページでも同じ見え方になる） */
 body::before {
   content: "";
