@@ -212,7 +212,7 @@ main {
 .footer {
   position: static;        /* 追従固定を解除 */
   margin-top: auto;        /* 画面下へ押し下げる */
-  width: 100vw;  /* ← 全幅を強制 */
+  width: 100%;  /* ← 全幅を強制 */
   background-color: black;
   padding: 16px 16px calc(16px + env(safe-area-inset-bottom, 0px));
   box-shadow: 0 -4px 10px rgba(0,0,0,.04);
