@@ -1040,11 +1040,6 @@ body { color: var(--ink); background: var(--paper); }
   box-shadow: var(--shadow);
 }
 
-.pc-only{ display:none; }
-@media (min-width: 900px){
-  .pc-only{ display:inline; }
-}
-
 .hero-ctas{
   display: flex;
   gap: 14px;
