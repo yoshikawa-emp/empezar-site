@@ -43,8 +43,16 @@ body {
   min-width: 530px;
 }
 
-@media screen and (max-width: 530px) {
+/*@media screen and (max-width: 530px) {
   body {
+    transform: scale(0.77);
+    transform-origin: top left;
+    width: calc(100% / 0.77);
+  }
+}*/
+
+@media screen and (max-width: 530px) {
+  .wrapper {
     transform: scale(0.77);
     transform-origin: top left;
     width: calc(100% / 0.77);
