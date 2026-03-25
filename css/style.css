@@ -444,16 +444,6 @@ main {
   color:#111 !important;          /* または var(--ink) */
 }
 
-/* ページ全体の内側余白に合わせたいとき（任意） */
-@media (min-width: 1024px){
-  /* 例えばヘッダーの .container.nav と同じ左右余白に合わせたい場合 */
-  .company-card{
-    /* 左ペインの基準位置を少し右にしたいときだけ有効化
-    margin-left: 16px !important;
-    */
-  }
-}
-
 /* スマホでの見え方は従来どおり（中央→左）でOKだが、
    さらに端まで寄せたいときは内側余白も調整（任意） */
 @media (max-width: 720px){
