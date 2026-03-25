@@ -166,7 +166,7 @@ body::before {
 }
 
 body {
-  padding-top: 80px;  /* ヘッダーの高さ分余白を作る */
+  padding-top: 240px;  /* ヘッダーの高さ分余白を作る */
 }
 
 .header .container.nav {
