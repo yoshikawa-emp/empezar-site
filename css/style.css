@@ -255,6 +255,25 @@ main {
   box-shadow: 0 8px 22px rgba(0,0,0,.45);
 }
 
+.footer {
+  width: 100%;
+  background: black;
+  padding: 20px 0;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.nav-block,
+.copy-block {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
 .main-section {
     margin: 0;
     padding: 20px;
