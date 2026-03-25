@@ -44,10 +44,9 @@ body {
 }
 
 /* スマホでは min-width を解除する */
-@media (max-width: 599px) {
+@media (max-width: 530px) {
   body {
     min-width: 100%;
-    overflow-x: hidden;
   }
 }
 
