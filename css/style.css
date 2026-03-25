@@ -1004,7 +1004,10 @@ html { scroll-behavior: smooth; }
 body { 
   color: var(--ink); 
   background: var(--paper);
-  padding-top: 240px;  /* ヘッダーの高さ分余白を作る */;
+}
+
+main {
+  margin-top: 240px; /* ヘッダー高さ分 */
 }
 
 .hero{
