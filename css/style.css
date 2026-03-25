@@ -43,6 +43,14 @@ body {
   min-width: 530px;
 }
 
+/* スマホでは min-width を解除する */
+@media (max-width: 599px) {
+  body {
+    min-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
 /* 画面全体に固定される背景（どのページでも同じ見え方になる） */
 body::before {
   content: "";
