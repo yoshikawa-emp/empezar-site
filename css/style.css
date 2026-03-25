@@ -165,10 +165,6 @@ body::before {
   z-index: 1000;
 }
 
-body {
-  padding-top: 240px;  /* ヘッダーの高さ分余白を作る */
-}
-
 .header .container.nav {
   display: flex;
   align-items: center;      /* ロゴとナビの高さを揃える */
@@ -1004,7 +1000,12 @@ main {
 }
 
 html { scroll-behavior: smooth; }
-body { color: var(--ink); background: var(--paper); }
+
+body { 
+  color: var(--ink); 
+  background: var(--paper);
+  padding-top: 240px;  /* ヘッダーの高さ分余白を作る */;
+}
 
 .hero{
   position: relative;
