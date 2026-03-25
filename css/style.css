@@ -45,9 +45,9 @@ body {
 
 @media screen and (max-width: 530px) {
   body {
-    transform: scale(0.8);
+    transform: scale(0.75);
     transform-origin: top left;
-    width: calc(100% / 0.8);
+    /*width: calc(100% / 0.75);*/
   }
 }
 
