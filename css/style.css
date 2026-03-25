@@ -1004,6 +1004,7 @@ html { scroll-behavior: smooth; }
 body { 
   color: var(--ink); 
   background: var(--paper);
+  width: 100%;
 }
 
 main {
