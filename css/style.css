@@ -53,6 +53,14 @@ body::before {
               no-repeat center / cover;
 }
 
+@media (max-width: 530px) {
+  body {
+    transform: scale(calc(100vw / 530));
+    transform-origin: top left;
+    width: 530px;
+  }
+}
+
 .nav-links {
   display: flex;
   align-items: center;
