@@ -420,7 +420,7 @@ main {
 }
 
 /* ダークモード（任意） */
-@media (prefers-color-scheme: dark){
+/*@media (prefers-color-scheme: dark){
   .company-card{
     background: #0f1522;
     border-color: color-mix(in srgb, var(--brand-300) 20%, #000);
@@ -437,7 +437,7 @@ main {
     color: #e6edf3;
   }
   .company-card .cell .en{ color: #9fb0c3; }
-}
+}*/
 
 
 .company-card,
@@ -1004,7 +1004,7 @@ main {
   --shadow: 0 20px 40px rgba(15,21,36,0.15);
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root{
     --ink:#eaf0ff;
     --paper:#0b0f1a;
@@ -1013,7 +1013,7 @@ main {
     --stroke:rgba(255,255,255,0.06);
     --shadow: 0 30px 60px rgba(0,0,0,0.45);
   }
-}
+}*/
 
 main {
   margin-top: 240px; /* ヘッダー高さ分 */
